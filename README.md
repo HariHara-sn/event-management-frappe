@@ -1,41 +1,196 @@
-### Event Management
+# Event Management Web Application
 
-A Frappe-based web application to manage events, attendees, and ticket sales.
+*(Built using Frappe Framework)*
 
-### Installation
+---
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+## Project Overview
+
+This project is a **Frappe-based Event Management Web Application** developed as part of a Developer Hiring Test.
+
+The application enables event planners to:
+
+* Create and manage events
+* Register and manage attendees
+* Track ticket sales and event capacity
+* Import event data using CSV files
+* View basic ticket and revenue reports
+
+For simplicity, the system is designed for **single-role usage (Event Planner)** and does not implement complex user roles or permissions.
+
+---
+
+## Technology Stack
+
+* **Framework:** Frappe Framework
+* **Backend:** Python (Frappe ORM & Controllers)
+* **Database:** MariaDB (via Frappe)
+* **Frontend:** Frappe Desk UI / Web Forms
+* **Version Control:** Git & GitHub
+
+---
+
+## DocTypes Implemented
+
+### 1️⃣ Event
+
+Stores all core event information.
+
+**Fields:**
+
+* Event Title
+* Description
+* Event Date
+* Location
+* Capacity
+* Ticket Price
+* Tickets Sold
+* Remaining Capacity
+
+---
+
+### 2️⃣ Attendee
+
+Stores attendee details and links them to specific events.
+
+**Fields:**
+
+* Attendee Name
+* Email
+* Phone Number
+* Event (Link to Event)
+
+---
+
+### 3️⃣ Ticket Sale
+
+Handles ticket transactions and revenue calculation.
+
+**Fields:**
+
+* Event (Link to Event)
+* Attendee
+* Ticket Quantity
+* Total Price
+
+---
+
+## Event Management
+
+* Create events with:
+
+* Title, Description, Date, Location, Capacity
+* Update and delete events
+* Search and filter events by:
+
+  * Event Title
+  * Event Date
+
+---
+
+### Attendee Management
+
+* Register attendees for specific events
+* Update attendee details
+* View attendees mapped to each event
+* Prevent registrations when event capacity is exceeded
+
+---
+
+### Ticket Sales Management
+
+* Track:
+
+  * Tickets sold
+  * Tickets available
+* Automatically calculate:
+
+  * Total ticket price
+  * Remaining event capacity
+* Prevent ticket sales when capacity is exceeded
+
+---
+
+### 🔹 CSV Import (Data Import)
+
+* Import Event records using CSV files
+* Supported CSV fields:
+
+  * Event Title
+  * Description
+  * Event Date
+  * Location
+  * Capacity
+* Implemented using **Frappe Data Import Tool**
+
+---
+
+### 🔹 Reports
+
+* Event-wise:
+
+  * Total tickets sold
+  * Revenue per event
+* Implemented using **Frappe Report Builder**
+
+---
+
+## 🧪 How to Run & Test the Application
+
+### ▶️ Start the Server
 
 ```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app event_management
+bench start
 ```
 
-### Contributing
+Open in browser:
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
-
-```bash
-cd apps/event_management
-pre-commit install
+```
+http://127.0.0.1:8000/app/
 ```
 
-Pre-commit is configured to use the following tools for checking and formatting your code:
+---
 
-- ruff
-- eslint
-- prettier
-- pyupgrade
+### ▶️ Test Event & Ticket Flow
 
-### CI
+1. Create an Event with:
 
-This app can use GitHub Actions for CI. The following workflows are configured:
+   * Capacity
+   * Ticket Price
+2. Create a Ticket Sale for the event
+3. Verify:
 
-- CI: Installs this app and runs unit tests on every push to `develop` branch.
-- Linters: Runs [Frappe Semgrep Rules](https://github.com/frappe/semgrep-rules) and [pip-audit](https://pypi.org/project/pip-audit/) on every pull request.
+   * Tickets Sold increases
+   * Remaining Capacity decreases
+   * Total Price is auto-calculated
+4. Try selling tickets beyond capacity → system blocks the action
+
+---
+
+### Test CSV Import
+
+1. Go to **Data Import**
+2. Select **Event**
+3. Download the CSV template
+4. Upload a filled CSV file
+5. Verify imported events in the Event list
+
+---
 
 
-### License
+## Screenshots (For Submission)
 
-mit
+* Event Creation
+* Event List View
+* Attendee List
+* Ticket Sale Entry
+* Ticket Tracking
+* CSV Import Success
+* Reports View
+
+---
+
+## 👤 Author
+
+**HARI HARA SUDHAN S - B.TECH IT**
+Event Management Web Application using Frappe Framework
