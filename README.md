@@ -190,7 +190,7 @@ Event FormCreation
 ![ticket](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/ticke_2.png?raw=true)
 * Ticket Tracking
 ![ticket_tracking](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/ticket_tracking.png?raw=true)
-* Reports View
+* Reports View data is from csv file
 ![report](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/image%20copy%202.png?raw=true)
 
 ---
