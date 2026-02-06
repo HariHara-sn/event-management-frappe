@@ -180,17 +180,23 @@ http://127.0.0.1:8000/app/
 
 ## Screenshots (For Submission)
 
-* Event Creation
-* Event List View
+Event FormCreation
+![event](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/event_1.png?raw=true)
+
+![event_form](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/event_data.png?raw=true)
 * Attendee List
+![attendee](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/event_2.png?raw=true)
 * Ticket Sale Entry
+![ticket](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/ticke_2.png?raw=true)
 * Ticket Tracking
-* CSV Import Success
+![ticket_tracking](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/ticket_tracking.png?raw=true)
 * Reports View
+![report](https://github.com/HariHara-sn/event-management-frappe/blob/main/Images/image%20copy%202.png?raw=true)
 
 ---
 
 ## 👤 Author
 
 **HARI HARA SUDHAN S - B.TECH IT**
+
 Event Management Web Application using Frappe Framework
